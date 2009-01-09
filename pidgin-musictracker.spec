@@ -1,5 +1,5 @@
 %define name pidgin-musictracker
-%define version 0.4.12
+%define version 0.4.13
 %define release %mkrel 1
 
 Summary: Plugin for Pidgin that displays the current song in the status
@@ -7,7 +7,6 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://pidgin-musictracker.googlecode.com/files/%{name}-%{version}.tar.bz2
-Patch: pidgin-musictracker-0.4.8-disable-werror.patch
 License: GPLv2+
 Group: Networking/Instant messaging
 Url: http://code.google.com/p/pidgin-musictracker/
@@ -27,8 +26,6 @@ MPC/MPD, Exaile, Banshee, Quod Libet.
 
 %prep
 %setup -q
-%patch -p1
-autoreconf
 
 %build
 %configure2_5x
@@ -39,10 +36,12 @@ rm -rf %{buildroot}
 %makeinstall_std
 rm -f %buildroot%_libdir/pidgin/musictracker.{a,la}
 
+%find_lang musictracker
+
 %clean
 rm -rf %{buildroot}
 
-%files
+%files -f musictracker.lang
 %defattr(-,root,root)
 %doc README NEWS  THANKS AUTHORS
 %_libdir/pidgin/musictracker.so
