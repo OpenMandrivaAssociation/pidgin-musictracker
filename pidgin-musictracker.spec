@@ -13,7 +13,9 @@ Url: http://code.google.com/p/pidgin-musictracker/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: pidgin-devel
 BuildRequires: dbus-glib-devel >= 0.73
+%if %mdvver <= 201000
 BuildRequires: xmms2-devel
+%endif
 Requires: pidgin
 
 %description
