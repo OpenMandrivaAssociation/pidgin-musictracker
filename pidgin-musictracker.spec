@@ -1,6 +1,6 @@
 %define name pidgin-musictracker
 %define version 0.4.22
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Plugin for Pidgin that displays the current song in the status
 Name: %{name}
