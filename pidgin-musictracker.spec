@@ -30,7 +30,7 @@ MPC/MPD, Exaile, Banshee, Quod Libet.
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x --disable-werror
 %make
 
 %install
