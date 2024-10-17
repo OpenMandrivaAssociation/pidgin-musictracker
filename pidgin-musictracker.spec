@@ -9,7 +9,7 @@ Release: %{release}
 Source0: http://pidgin-musictracker.googlecode.com/files/%{name}-%{version}.tar.bz2
 License: GPLv2+
 Group: Networking/Instant messaging
-Url: http://code.google.com/p/pidgin-musictracker/
+Url: https://code.google.com/p/pidgin-musictracker/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: pidgin-devel
 BuildRequires: dbus-glib-devel >= 0.73
