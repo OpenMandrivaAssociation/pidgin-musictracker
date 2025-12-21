@@ -11,6 +11,11 @@ License: GPLv2+
 Group: Networking/Instant messaging
 Url: https://code.google.com/p/pidgin-musictracker/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pidgin-devel
 BuildRequires: dbus-glib-devel >= 0.73
 %if %mdvver <= 201000
